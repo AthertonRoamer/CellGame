@@ -1,6 +1,95 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7tfm4d68kv7b"]
+[gd_scene load_steps=4 format=3 uid="uid://c7tfm4d68kv7b"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_8u1rj"]
+[ext_resource type="PackedScene" uid="uid://cw0bfdkvq5u88" path="res://mover_cell.tscn" id="2_u507c"]
+[ext_resource type="PackedScene" uid="uid://bawd4mgcqb0y1" path="res://blank_cell.tscn" id="3_6w2iy"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_8u1rj")
+
+[node name="MoverCell" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(108, 199)
+
+[node name="MoverCell2" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(320, 127)
+
+[node name="MoverCell3" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(105, 118)
+
+[node name="MoverCell4" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(168, 203)
+
+[node name="MoverCell5" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(97, 343)
+
+[node name="MoverCell6" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(163, 337)
+
+[node name="MoverCell7" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(231, 337)
+
+[node name="MoverCell8" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(114, 494)
+
+[node name="MoverCell13" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(199, 588)
+
+[node name="MoverCell14" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(129, 577)
+
+[node name="MoverCell10" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(467, 500)
+
+[node name="MoverCell11" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(548, 502)
+
+[node name="MoverCell9" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(197, 498)
+mover_direction = Vector2(-1, 0)
+
+[node name="MoverCell15" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(848, 592)
+mover_direction = Vector2(-1, 0)
+
+[node name="MoverCell16" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(769, 590)
+mover_direction = Vector2(-1, 0)
+
+[node name="MoverCell12" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(633, 506)
+mover_direction = Vector2(-1, 0)
+
+[node name="MoverCell17" parent="." instance=ExtResource("2_u507c")]
+position = Vector2(348, 666)
+mover_direction = Vector2(0, -1)
+
+[node name="BlankCell" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(179, 124)
+
+[node name="BlankCell2" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(397, 126)
+
+[node name="BlankCell3" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(528, 133)
+
+[node name="BlankCell4" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(328, 201)
+
+[node name="BlankCell5" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(250, 205)
+
+[node name="BlankCell6" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(452, 337)
+
+[node name="BlankCell7" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(305, 333)
+
+[node name="BlankCell8" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(525, 342)
+
+[node name="BlankCell9" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(1077, 316)
+
+[node name="ChangeTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ChangeTimer" to="." method="_on_change_timer_timeout"]
