@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw0bfdkvq5u88"]
+
+[ext_resource type="Texture2D" uid="uid://bk0imkk24xu4t" path="res://art/mover_cell_filler.png" id="1_iqvw5"]
+[ext_resource type="Script" path="res://cells/mover_cell.gd" id="2_4ddol"]
+
+[node name="MoverCell" type="Sprite2D"]
+texture = ExtResource("1_iqvw5")
+script = ExtResource("2_4ddol")
