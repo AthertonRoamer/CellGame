@@ -41,6 +41,7 @@ func change_position(new_cell_pos : Vector2) -> void: #new_cell_pos should be a 
 
 func push(direction : Vector2) -> void: #push is meant to be called to non-mover cells who are pushed
 	change_position(cell_position + direction)
+#	print(name + " was pushed")
 	
 func cleanup():
 	Data.current_layout.erase(cell_position)
