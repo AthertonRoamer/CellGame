@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ovry6jffdg0"]
+
+[ext_resource type="Texture2D" uid="uid://nqyl1ajg3kwj" path="res://art/filler_algae_cell.png" id="1_b3xaf"]
+[ext_resource type="Shader" path="res://cells/algae_cell_fade.gdshader" id="1_gv6wh"]
+[ext_resource type="Script" path="res://cells/algae_cell.gd" id="2_j3h0d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jy0qq"]
+shader = ExtResource("1_gv6wh")
+shader_parameter/alpha = 1.0
+
+[node name="AlgaeCell" type="Sprite2D"]
+material = SubResource("ShaderMaterial_jy0qq")
+texture = ExtResource("1_b3xaf")
+script = ExtResource("2_j3h0d")
+
+[node name="FreeTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="FreeTimer" to="." method="_on_free_timer_timeout"]
