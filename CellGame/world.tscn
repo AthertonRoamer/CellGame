@@ -1,95 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7tfm4d68kv7b"]
+[gd_scene load_steps=6 format=3 uid="uid://c7tfm4d68kv7b"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_8u1rj"]
 [ext_resource type="PackedScene" uid="uid://cw0bfdkvq5u88" path="res://mover_cell.tscn" id="2_u507c"]
 [ext_resource type="PackedScene" uid="uid://bawd4mgcqb0y1" path="res://blank_cell.tscn" id="3_6w2iy"]
+[ext_resource type="Texture2D" uid="uid://b341jygvl0arh" path="res://art/filler_selector.png" id="4_rs1r7"]
+[ext_resource type="Script" path="res://world/selector.gd" id="5_6gf0o"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_8u1rj")
 
-[node name="MoverCell" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(128, 128)
-
-[node name="MoverCell2" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(320, 64)
-
-[node name="MoverCell3" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(192, 64)
-
-[node name="MoverCell4" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(192, 128)
-
-[node name="MoverCell5" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(128, 192)
-
-[node name="MoverCell6" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(192, 192)
-
-[node name="MoverCell7" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(256, 192)
-
-[node name="MoverCell8" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(576, 256)
-
 [node name="MoverCell13" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(768, 320)
+position = Vector2(448, 576)
 
 [node name="MoverCell14" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(704, 320)
-
-[node name="MoverCell10" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(512, 256)
-
-[node name="MoverCell11" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(640, 256)
-
-[node name="MoverCell9" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(640, 320)
-mover_direction = Vector2(-1, 0)
-
-[node name="MoverCell15" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(576, 320)
-mover_direction = Vector2(-1, 0)
-
-[node name="MoverCell16" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(768, 256)
-mover_direction = Vector2(-1, 0)
-
-[node name="MoverCell12" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(704, 256)
+position = Vector2(320, 576)
 mover_direction = Vector2(-1, 0)
 
 [node name="MoverCell17" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(512, 320)
+position = Vector2(384, 576)
 mover_direction = Vector2(0, -1)
 
-[node name="BlankCell" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(256, 64)
-
-[node name="BlankCell2" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(448, 384)
-
-[node name="BlankCell3" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(640, 192)
-
-[node name="BlankCell4" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(896, 256)
-
-[node name="BlankCell5" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(256, 128)
-
-[node name="BlankCell6" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(768, 128)
-
 [node name="BlankCell7" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(320, 192)
-
-[node name="BlankCell8" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(960, 320)
+position = Vector2(256, 576)
 
 [node name="BlankCell9" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(704, 448)
+position = Vector2(640, 576)
+
+[node name="BlankCell10" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(576, 576)
+
+[node name="BlankCell11" parent="." instance=ExtResource("3_6w2iy")]
+position = Vector2(512, 576)
+
 
 [node name="ChangeTimer" type="Timer" parent="."]
+
+[node name="Selector" type="Sprite2D" parent="."]
+texture = ExtResource("4_rs1r7")
+script = ExtResource("5_6gf0o")
 
 [connection signal="timeout" from="ChangeTimer" to="." method="_on_change_timer_timeout"]

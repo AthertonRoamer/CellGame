@@ -26,7 +26,7 @@ func evaluate_cells():
 #			var strength_ahead := 0
 			#look backward
 			var past_space = cell_pos - cell.mover_direction
-			while(past_layout.has(past_space) and past_layout[past_space] is MoverCell):
+			while(past_layout.has(past_space) and past_layout[past_space] is MoverCell and past_layout[past_space].mover_direction == cell.mover_direction):
 				strength += 1
 				strength_behind += 1
 				past_space -= cell.mover_direction
