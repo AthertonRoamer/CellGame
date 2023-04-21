@@ -8,87 +8,87 @@
 script = ExtResource("1_8u1rj")
 
 [node name="MoverCell" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(108, 199)
+position = Vector2(128, 128)
 
 [node name="MoverCell2" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(320, 127)
+position = Vector2(320, 64)
 
 [node name="MoverCell3" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(105, 118)
+position = Vector2(192, 64)
 
 [node name="MoverCell4" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(168, 203)
+position = Vector2(192, 128)
 
 [node name="MoverCell5" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(97, 343)
+position = Vector2(128, 192)
 
 [node name="MoverCell6" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(163, 337)
+position = Vector2(192, 192)
 
 [node name="MoverCell7" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(231, 337)
+position = Vector2(256, 192)
 
 [node name="MoverCell8" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(114, 494)
+position = Vector2(576, 256)
 
 [node name="MoverCell13" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(199, 588)
+position = Vector2(768, 320)
 
 [node name="MoverCell14" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(129, 577)
+position = Vector2(704, 320)
 
 [node name="MoverCell10" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(467, 500)
+position = Vector2(512, 256)
 
 [node name="MoverCell11" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(548, 502)
+position = Vector2(640, 256)
 
 [node name="MoverCell9" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(197, 498)
+position = Vector2(640, 320)
 mover_direction = Vector2(-1, 0)
 
 [node name="MoverCell15" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(848, 592)
+position = Vector2(576, 320)
 mover_direction = Vector2(-1, 0)
 
 [node name="MoverCell16" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(769, 590)
+position = Vector2(768, 256)
 mover_direction = Vector2(-1, 0)
 
 [node name="MoverCell12" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(633, 506)
+position = Vector2(704, 256)
 mover_direction = Vector2(-1, 0)
 
 [node name="MoverCell17" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(348, 666)
+position = Vector2(512, 320)
 mover_direction = Vector2(0, -1)
 
 [node name="BlankCell" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(179, 124)
+position = Vector2(256, 64)
 
 [node name="BlankCell2" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(397, 126)
+position = Vector2(448, 384)
 
 [node name="BlankCell3" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(528, 133)
+position = Vector2(640, 192)
 
 [node name="BlankCell4" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(328, 201)
+position = Vector2(896, 256)
 
 [node name="BlankCell5" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(250, 205)
+position = Vector2(256, 128)
 
 [node name="BlankCell6" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(452, 337)
+position = Vector2(768, 128)
 
 [node name="BlankCell7" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(305, 333)
+position = Vector2(320, 192)
 
 [node name="BlankCell8" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(525, 342)
+position = Vector2(960, 320)
 
 [node name="BlankCell9" parent="." instance=ExtResource("3_6w2iy")]
-position = Vector2(1077, 316)
+position = Vector2(704, 448)
 
 [node name="ChangeTimer" type="Timer" parent="."]
 
