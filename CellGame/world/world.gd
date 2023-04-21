@@ -12,6 +12,7 @@ func _process(_delta):
 	pass
 
 func evaluate_cells():
+	#call global cell register on data in between every phase
 	#evaluate mover cells
 	#phase: mover cells going up
 	var past_layout := Data.current_layout.duplicate() #dictionarys are always passed by reference so must use duplicate()
@@ -58,7 +59,8 @@ func evaluate_cells():
 				if past_layout.has(next_space) and past_layout[next_space] is Cell and weight >= strength_behind:
 					past_layout[next_space].push(cell.mover_direction)
 				cell.move()
-				
+	
+	Data.global_cell_register()
 	#phase: mover cells going down
 	past_layout = Data.current_layout.duplicate() #dictionarys are always passed by reference so must use duplicate()
 	for cell_pos in past_layout:
@@ -105,6 +107,7 @@ func evaluate_cells():
 					past_layout[next_space].push(cell.mover_direction)
 				cell.move()
 				
+	Data.global_cell_register()
 	#phase: mover cells going right
 	past_layout = Data.current_layout.duplicate() #dictionarys are always passed by reference so must use duplicate()
 	for cell_pos in past_layout:
@@ -142,7 +145,7 @@ func evaluate_cells():
 						weight += 1
 					if weight > strength and end_strength:
 						break
-				next_space += cell.mover_direction
+				next_space += cell.mover_direction #advance cursor so to speak
 			#reset looking forward
 			next_space = cell_pos + cell.mover_direction * strength
 			#preform final check based on accumulated data and move/push if applicable
@@ -150,7 +153,8 @@ func evaluate_cells():
 				if past_layout.has(next_space) and past_layout[next_space] is Cell and weight >= strength_behind:
 					past_layout[next_space].push(cell.mover_direction)
 				cell.move()
-				
+	
+	Data.global_cell_register()
 	#phase: mover cells going left
 	past_layout = Data.current_layout.duplicate() #dictionarys are always passed by reference so must use duplicate()
 	for cell_pos in past_layout:

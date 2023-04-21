@@ -1,4 +1,5 @@
 extends Node
+signal register
 
 enum {BLANK_CELL, MOVER_CELL, BOMB_CELL}
 
@@ -9,3 +10,6 @@ var cell_size = 64
 var current_layout : Dictionary
 
 var change_interval := 2
+
+func global_cell_register():
+	emit_signal("register")
