@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch3uqp2dp2x36"]
+
+[ext_resource type="Texture2D" uid="uid://deigenvrjhn5j" path="res://art/filler_wall_cell.png" id="1_cwsme"]
+[ext_resource type="Script" path="res://cells/wall_cell.gd" id="2_qb7bp"]
+
+[node name="WallCell" type="Sprite2D"]
+texture = ExtResource("1_cwsme")
+script = ExtResource("2_qb7bp")

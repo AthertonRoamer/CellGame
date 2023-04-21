@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgqmphk0xacml"]
+
+[ext_resource type="Texture2D" uid="uid://dlv1b6wqeuwwr" path="res://art/filler_nucleus_cell.png" id="1_f8ro6"]
+[ext_resource type="Script" path="res://cells/nucleus.gd" id="1_t1num"]
+
+[node name="Nucleus" type="Sprite2D"]
+texture = ExtResource("1_f8ro6")
+script = ExtResource("1_t1num")
