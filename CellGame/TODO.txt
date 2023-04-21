@@ -1,0 +1,2 @@
+Optimization: 
+	fix process loop running for each cell, if no bugs, no big deal, if still bugs, big deal :)
