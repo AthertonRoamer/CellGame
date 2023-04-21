@@ -8,4 +8,4 @@ var cell_size = 64
 # it will be the authority for cell positions and will be referenced by the cell evalulator
 var current_layout : Dictionary
 
-var change_interval := 1
+var change_interval := 2
