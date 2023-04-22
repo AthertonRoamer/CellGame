@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_8u1rj"]
 [ext_resource type="PackedScene" uid="uid://cw0bfdkvq5u88" path="res://mover_cell.tscn" id="2_u507c"]
-[ext_resource type="PackedScene" uid="uid://c3ovry6jffdg0" path="res://algae_cell.tscn" id="3_oknrq"]
-[ext_resource type="PackedScene" uid="uid://bgqmphk0xacml" path="res://nucleus.tscn" id="4_crvha"]
-[ext_resource type="PackedScene" uid="uid://ch3uqp2dp2x36" path="res://wall_cell.tscn" id="4_h3ocs"]
-[ext_resource type="PackedScene" uid="uid://cxgjohtrreoky" path="res://selector.tscn" id="4_m6we1"]
+[ext_resource type="PackedScene" path="res://algae_cell.tscn" id="3_oknrq"]
+[ext_resource type="PackedScene" path="res://nucleus.tscn" id="4_crvha"]
+[ext_resource type="PackedScene" path="res://wall_cell.tscn" id="4_h3ocs"]
+[ext_resource type="PackedScene" path="res://selector.tscn" id="4_m6we1"]
 [ext_resource type="PackedScene" uid="uid://bawd4mgcqb0y1" path="res://blank_cell.tscn" id="6_tg4ug"]
 
 [node name="World" type="Node2D"]
