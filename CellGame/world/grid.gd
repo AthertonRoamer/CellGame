@@ -9,7 +9,7 @@ var line_width : float = 1
 var offset = Vector2i(32, 32)
 
 func _draw():
-	line_color.a8 = 24
+	line_color.a8 = 255
 	var win_size = DisplayServer.screen_get_size()
 #	win_size += Data.cell_size * 2
 	#draw upright lines

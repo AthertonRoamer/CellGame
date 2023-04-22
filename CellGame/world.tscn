@@ -1,16 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7tfm4d68kv7b"]
+[gd_scene load_steps=10 format=3 uid="uid://c7tfm4d68kv7b"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_8u1rj"]
 [ext_resource type="PackedScene" uid="uid://cw0bfdkvq5u88" path="res://mover_cell.tscn" id="2_u507c"]
-[ext_resource type="PackedScene" path="res://algae_cell.tscn" id="3_oknrq"]
+[ext_resource type="PackedScene" uid="uid://dg8ufi6j85mfd" path="res://algae_cell.tscn" id="3_oknrq"]
 [ext_resource type="PackedScene" path="res://nucleus.tscn" id="4_crvha"]
 [ext_resource type="PackedScene" path="res://wall_cell.tscn" id="4_h3ocs"]
 [ext_resource type="PackedScene" path="res://selector.tscn" id="4_m6we1"]
 [ext_resource type="PackedScene" uid="uid://bawd4mgcqb0y1" path="res://blank_cell.tscn" id="6_tg4ug"]
 [ext_resource type="PackedScene" uid="uid://rbk5imkoo04v" path="res://grid.tscn" id="8_1bidu"]
 
+[sub_resource type="Environment" id="Environment_fwdmj"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_strength = 1.06
+glow_bloom = 0.82
+glow_blend_mode = 0
+glow_map_strength = 0.0
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_8u1rj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -384.0
+offset_top = -256.0
+offset_right = 1536.0
+offset_bottom = 896.0
+color = Color(0, 0, 0, 1)
 
 [node name="AlgaeCell" parent="." instance=ExtResource("3_oknrq")]
 position = Vector2(192, 448)
@@ -48,6 +64,9 @@ position = Vector2(384, 448)
 [node name="Selector" parent="." instance=ExtResource("4_m6we1")]
 
 [node name="Grid" parent="." instance=ExtResource("8_1bidu")]
-line_color = Color(1, 1, 1, 0.0941176)
+line_color = Color(0.294118, 0.494118, 1, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fwdmj")
 
 [connection signal="timeout" from="ChangeTimer" to="." method="_on_change_timer_timeout"]
