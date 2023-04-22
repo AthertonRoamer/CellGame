@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7tfm4d68kv7b"]
+[gd_scene load_steps=9 format=3 uid="uid://c7tfm4d68kv7b"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_8u1rj"]
 [ext_resource type="PackedScene" uid="uid://cw0bfdkvq5u88" path="res://mover_cell.tscn" id="2_u507c"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ch3uqp2dp2x36" path="res://wall_cell.tscn" id="4_h3ocs"]
 [ext_resource type="PackedScene" uid="uid://cxgjohtrreoky" path="res://selector.tscn" id="4_m6we1"]
 [ext_resource type="PackedScene" uid="uid://bawd4mgcqb0y1" path="res://blank_cell.tscn" id="6_tg4ug"]
+[ext_resource type="PackedScene" uid="uid://rbk5imkoo04v" path="res://grid.tscn" id="8_1bidu"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_8u1rj")
@@ -45,5 +46,8 @@ position = Vector2(384, 448)
 [node name="ChangeTimer" type="Timer" parent="."]
 
 [node name="Selector" parent="." instance=ExtResource("4_m6we1")]
+
+[node name="Grid" parent="." instance=ExtResource("8_1bidu")]
+line_color = Color(1, 1, 1, 0.0941176)
 
 [connection signal="timeout" from="ChangeTimer" to="." method="_on_change_timer_timeout"]
