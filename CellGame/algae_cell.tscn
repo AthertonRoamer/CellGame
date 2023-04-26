@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3ovry6jffdg0"]
+[gd_scene load_steps=5 format=3 uid="uid://dg8ufi6j85mfd"]
 
 [ext_resource type="Texture2D" uid="uid://nqyl1ajg3kwj" path="res://art/filler_algae_cell.png" id="1_b3xaf"]
 [ext_resource type="Shader" path="res://cells/algae_cell_fade.gdshader" id="1_gv6wh"]

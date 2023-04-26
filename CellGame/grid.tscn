@@ -4,3 +4,4 @@
 
 [node name="Grid" type="Node2D"]
 script = ExtResource("1_wbnqn")
+line_color = Color(0.517647, 0.0156863, 0.00784314, 1)
