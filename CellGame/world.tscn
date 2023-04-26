@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7tfm4d68kv7b"]
+
+[gd_scene load_steps=6 format=3 uid="uid://c7tfm4d68kv7b"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_8u1rj"]
 [ext_resource type="PackedScene" uid="uid://cw0bfdkvq5u88" path="res://mover_cell.tscn" id="2_u507c"]
-[ext_resource type="PackedScene" uid="uid://dg8ufi6j85mfd" path="res://algae_cell.tscn" id="3_oknrq"]
-[ext_resource type="PackedScene" path="res://nucleus.tscn" id="4_crvha"]
-[ext_resource type="PackedScene" path="res://wall_cell.tscn" id="4_h3ocs"]
-[ext_resource type="PackedScene" path="res://selector.tscn" id="4_m6we1"]
+[ext_resource type="PackedScene" uid="uid://cxgjohtrreoky" path="res://selector.tscn" id="4_m6we1"]
+
 [ext_resource type="PackedScene" uid="uid://bawd4mgcqb0y1" path="res://blank_cell.tscn" id="6_tg4ug"]
 [ext_resource type="PackedScene" uid="uid://rbk5imkoo04v" path="res://grid.tscn" id="8_1bidu"]
 
@@ -32,50 +31,16 @@ offset_right = 1408.0
 offset_bottom = 960.0
 color = Color(0, 0, 0, 1)
 
-[node name="AlgaeCell" parent="." instance=ExtResource("3_oknrq")]
-position = Vector2(640, 256)
 
 [node name="MoverCell2" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(704, 384)
-
-[node name="MoverCell3" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(768, 192)
-mover_direction = Vector2(0, 1)
-
-[node name="MoverCell4" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(768, 256)
+position = Vector2(704, 256)
 mover_direction = Vector2(-1, 0)
 
 [node name="MoverCell5" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(640, 512)
-mover_direction = Vector2(0, -1)
-
-[node name="MoverCell6" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(640, 320)
-
-[node name="MoverCell7" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(608, 160)
-mover_direction = Vector2(0, 1)
-
-[node name="MoverCell8" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(896, 256)
-mover_direction = Vector2(-1, 0)
-
-[node name="MoverCell9" parent="." instance=ExtResource("2_u507c")]
-position = Vector2(320, 320)
-mover_direction = Vector2(0, -1)
-
-[node name="WallCell" parent="." instance=ExtResource("4_h3ocs")]
-position = Vector2(448, 384)
-
-[node name="Nucleus" parent="." instance=ExtResource("4_crvha")]
-position = Vector2(128, 256)
-
-[node name="BlankCell" parent="." instance=ExtResource("6_tg4ug")]
-position = Vector2(512, 256)
+position = Vector2(640, 256)
 
 [node name="BlankCell2" parent="." instance=ExtResource("6_tg4ug")]
-position = Vector2(768, 320)
+position = Vector2(768, 256)
 
 [node name="ChangeTimer" type="Timer" parent="."]
 
