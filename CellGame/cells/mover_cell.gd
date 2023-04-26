@@ -27,7 +27,7 @@ func _ready():
 				
 func move() -> void:
 	change_position(cell_position + mover_direction)
-#	print(name + " moved")
+	print(name + " moved")
 
 
 

@@ -11,7 +11,7 @@ var cell_size = 64
 var current_layout : Dictionary
 var players := [] # array of all players nucleuses
 
-var change_interval := 4
+var change_interval := 2
 
 func alert_changing():
 	emit_signal("changing")

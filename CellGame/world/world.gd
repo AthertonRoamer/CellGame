@@ -49,6 +49,7 @@ func evaluate_mover_cell(cell_pos : Vector2, past_layout : Dictionary, mover_dir
 		var weight := 0
 		var strength_behind := 1
 		var stocked := 0
+		var first_opposite : int = 0
 		var cell_to_break : Cell
 #		var strength_ahead := 0
 		#look backward
@@ -67,6 +68,17 @@ func evaluate_mover_cell(cell_pos : Vector2, past_layout : Dictionary, mover_dir
 				else:
 					strength += 1
 #					strength_ahead += 1
+			elif past_layout[next_space] is MoverCell and past_layout[next_space].mover_direction == cell.mover_direction * -1:
+				#opposite facing mover cell
+				end_strength = true
+				if stocked > 0:
+					stocked -= 1
+				else:
+					weight += 1
+				if stocked > 0:
+					stocked -= 1
+				else:
+					first_opposite = 1
 			elif past_layout[next_space].unpushable: #cells that cannot be pushed
 				end_strength = true
 				weight = strength + 1
@@ -86,7 +98,8 @@ func evaluate_mover_cell(cell_pos : Vector2, past_layout : Dictionary, mover_dir
 		#reset looking forward
 		next_space = cell_pos + cell.mover_direction * strength
 		#preform final check based on accumulated data and move/push if applicable
-		if weight <= strength:
+		print(cell.name + "  weight: " + str(weight) + " strength: " + str(strength) + " strength behind: " + str(strength_behind) + "\n")
+		if (weight + first_opposite) <= strength:
 			if past_layout.has(next_space) and past_layout[next_space] is Cell and weight >= strength_behind:
 				past_layout[next_space].push(cell.mover_direction)
 			if cell_to_break != null:
