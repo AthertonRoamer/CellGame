@@ -29,6 +29,9 @@ offset_right = 1408.0
 offset_bottom = 960.0
 color = Color(0, 0, 0, 1)
 
+[node name="Grid" parent="." instance=ExtResource("8_1bidu")]
+line_color = Color(0.294118, 0.494118, 1, 1)
+
 [node name="MoverCell1" parent="." instance=ExtResource("2_u507c")]
 position = Vector2(640, 256)
 
@@ -48,12 +51,8 @@ mover_direction = Vector2(-1, 0)
 position = Vector2(832, 256)
 
 [node name="ChangeTimer" type="Timer" parent="."]
-one_shot = true
 
 [node name="Selector" parent="." instance=ExtResource("4_m6we1")]
-
-[node name="Grid" parent="." instance=ExtResource("8_1bidu")]
-line_color = Color(0.294118, 0.494118, 1, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fwdmj")
