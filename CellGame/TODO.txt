@@ -1,2 +1,32 @@
+CELL GAME PROJECT OVERVIEW
+
+Cell types:
+	Mover/Motor Cell-
+		...
+	Nucleus-
+		...
+	Algae-
+		...
+	Gatherer-
+		First cell we are making that has its own 'custom' movement mechanics. when clicked on in 
+		real time, you can designate a start and end position of its movement loop. It will follow 
+		this path by moving one tile at a time. It can gather one algae and also dump it in nucleus
+		for power. You can click on the start and end point with your mouse.
+	Acid Cell-
+		Basically deletes itself and any enemy cell upon contact with enemy cell. Pro to a bomb cell
+		because it cannot friendly fire.
+
+Game Cycle:
+	REAL TIME STRAT-
+		There are no turns, players move and play at same time, HOWEVER, generations take place standardly- meaning that
+		generations will continue to go and during a 'move' phase, players cannot place cells. The idea for these phases is 
+		to make it almost like a customizable thing for custom games where you can adjust the amount of time these phases take
+		before the game starts(almost like a chess game and the chess clock)- this is one of the many ideas for customizable 
+		game features. Others include maps, movement speed, etc...
+		
+		Build Phase-
+			when tapping 'b' on keyboard, 
+	
+
 Optimization: 
 	fix process loop running for each cell, if no bugs, no big deal, if still bugs, big deal :)
