@@ -1,9 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbhl3g15gxirk"]
+[gd_scene load_steps=3 format=3 uid="uid://cehc8uelciy52"]
 
-[ext_resource type="Texture2D" uid="uid://bcc4g4tv6qyy3" path="res://art/icon.svg" id="1_g4r72"]
+[ext_resource type="Texture2D" uid="uid://c231cicndeubo" path="res://art/filler_acid_cell.png" id="1_doa7h"]
 [ext_resource type="Script" path="res://cells/acid_cell.gd" id="2_10gl4"]
 
 [node name="acid_cell" type="Sprite2D"]
-modulate = Color(0.890196, 0, 0, 1)
-texture = ExtResource("1_g4r72")
+texture = ExtResource("1_doa7h")
 script = ExtResource("2_10gl4")
