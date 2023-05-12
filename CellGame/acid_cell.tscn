@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbhl3g15gxirk"]
+
+[ext_resource type="Texture2D" uid="uid://bcc4g4tv6qyy3" path="res://art/icon.svg" id="1_g4r72"]
+[ext_resource type="Script" path="res://cells/acid_cell.gd" id="2_10gl4"]
+
+[node name="acid_cell" type="Sprite2D"]
+modulate = Color(0.890196, 0, 0, 1)
+texture = ExtResource("1_g4r72")
+script = ExtResource("2_10gl4")

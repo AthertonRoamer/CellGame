@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_8u1rj"]
 [ext_resource type="PackedScene" uid="uid://cw0bfdkvq5u88" path="res://mover_cell.tscn" id="2_u507c"]
+
 [ext_resource type="PackedScene" uid="uid://cxgjohtrreoky" path="res://selector.tscn" id="4_m6we1"]
+
 [ext_resource type="PackedScene" uid="uid://bawd4mgcqb0y1" path="res://blank_cell.tscn" id="6_tg4ug"]
 [ext_resource type="PackedScene" uid="uid://rbk5imkoo04v" path="res://grid.tscn" id="8_1bidu"]
 
@@ -34,6 +36,7 @@ line_color = Color(0.294118, 0.494118, 1, 1)
 
 [node name="MoverCell1" parent="." instance=ExtResource("2_u507c")]
 position = Vector2(640, 256)
+
 
 [node name="MoverCell2" parent="." instance=ExtResource("2_u507c")]
 position = Vector2(704, 256)
