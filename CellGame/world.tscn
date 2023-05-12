@@ -1,10 +1,8 @@
-
-[gd_scene load_steps=6 format=3 uid="uid://c7tfm4d68kv7b"]
+[gd_scene load_steps=7 format=3 uid="uid://c7tfm4d68kv7b"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_8u1rj"]
 [ext_resource type="PackedScene" uid="uid://cw0bfdkvq5u88" path="res://mover_cell.tscn" id="2_u507c"]
-[ext_resource type="PackedScene" uid="uid://cxgjohtrreoky" path="res://selector.tscn" id="4_m6we1"]
-
+[ext_resource type="PackedScene" path="res://selector.tscn" id="4_m6we1"]
 [ext_resource type="PackedScene" uid="uid://bawd4mgcqb0y1" path="res://blank_cell.tscn" id="6_tg4ug"]
 [ext_resource type="PackedScene" uid="uid://rbk5imkoo04v" path="res://grid.tscn" id="8_1bidu"]
 
@@ -30,7 +28,6 @@ offset_top = -192.0
 offset_right = 1408.0
 offset_bottom = 960.0
 color = Color(0, 0, 0, 1)
-
 
 [node name="MoverCell2" parent="." instance=ExtResource("2_u507c")]
 position = Vector2(704, 256)
